@@ -28,5 +28,17 @@ namespace LayeredBusinessModel.BLL
             brewerList = brewerDAO.getAllBrewersBasics();
             return brewerList;
         }
+
+        public Brewer getBrewerWithID(String ID)
+        {
+            brewerDAO = new BrewerDAO();
+            return brewerDAO.getBrewerWithID(ID);
+        }
+
+        public void updateBrewer(Brewer brewer)
+        {
+            brewerDAO = new BrewerDAO();
+            brewerDAO.updateBrewer(brewer);
+        }
     }
 }

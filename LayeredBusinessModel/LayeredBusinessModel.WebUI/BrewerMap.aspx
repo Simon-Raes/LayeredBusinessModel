@@ -31,7 +31,7 @@
 
         function initialize() {
             var mapOptions = {
-                center: new google.maps.LatLng(-34.397, 150.644),
+                center: new google.maps.LatLng(50.806206, 3.283986),
                 zoom: 8
             };
             map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -98,16 +98,16 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:GridView ID="gvBrewers" runat="server" OnRowCommand="gvBrewers_RowCommand" AllowPaging="true">
+            <asp:GridView ID="gvBrewers" runat="server" OnRowCommand="gvBrewers_RowCommand" AllowPaging="True" OnPageIndexChanging="gvBrewers_PageIndexChanging">
                 <Columns>
-                    <asp:CommandField AccessibleHeaderText="Select" HeaderText="Select" ShowSelectButton="True" />
+                    <asp:ButtonField CommandName="Select" HeaderText="Select" Text="Select" />
+                    <asp:ButtonField CommandName="Clear" HeaderText="Clear" Text="Clear" />
                 </Columns>
             </asp:GridView>
             
             <input name="latFld" id="latFld" type="text" runat="server"/>
             <input name="lngFld" id="lngFld" type="text" runat="server"/>
-            <asp:Label ID="lblTest" runat="server" Text="Label"></asp:Label>
-
+            
         </div>
 
 

@@ -12,11 +12,13 @@ namespace LayeredBusinessModel.WebUI
 {
     public partial class BrewerMap : System.Web.UI.Page
     {
+        private BrewerService brewerService;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!Page.IsPostBack)
             {
-                BrewerService brewerService = new BrewerService();
+                brewerService = new BrewerService();
                 gvBrewers.DataSource = brewerService.GetAll();
                 gvBrewers.DataBind();
             }
@@ -24,11 +26,40 @@ namespace LayeredBusinessModel.WebUI
 
         protected void gvBrewers_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            //get selected brewer
+            brewerService = new BrewerService();            
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = gvBrewers.Rows[index];
-            String brewerID = row.Cells[1].Text;
+            String brewerID = row.Cells[2].Text; //hardcode cell number!
+            Brewer brewer = brewerService.getBrewerWithID(brewerID);
 
-            latFld.Value = "sdmfkqs";
+            if (e.CommandName == "Select")
+            {    
+                //update brewer, store lat and long
+                brewer.latitude = latFld.Value;
+                brewer.longitude = lngFld.Value;                
+            }
+            else if (e.CommandName == "Clear")
+            {
+                //update brewer, remove lat and long
+                brewer.latitude = "";
+                brewer.longitude = "";
+            }
+
+            //save updated brewer
+            brewerService.updateBrewer(brewer);
+            //update gridview
+            gvBrewers.DataSource = brewerService.GetAll();
+            gvBrewers.DataBind();
+            
+        }
+
+        protected void gvBrewers_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvBrewers.PageIndex = e.NewPageIndex;
+            brewerService = new BrewerService();
+            gvBrewers.DataSource = brewerService.GetAll();
+            gvBrewers.DataBind();
         }
     }
 }
