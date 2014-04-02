@@ -58,10 +58,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BrewerMap.aspx" />
+    <Content Include="Brewers_Image_Link.aspx" />
     <Content Include="Brewer_List_Beers.aspx" />
     <Content Include="Beer_List_Details.aspx" />
-    <Content Include="MapTest.html" />
+    <Content Include="CurrencyConverter.aspx" />
+    <Content Include="TemperatureConverter.aspx" />
+    <Content Include="Voetballers.aspx" />
+    <Content Include="Web References\CountryCurrency\CountryInformationService.disco" />
+    <Content Include="Web References\CurrencyService\CurrencyConvertor.disco" />
     <Content Include="Web.config" />
+    <Content Include="WebServices\HelloWorld.asmx" />
+    <Content Include="WebServices\TemperatureService.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrewerMap.aspx.cs">
@@ -70,6 +77,13 @@
     </Compile>
     <Compile Include="BrewerMap.aspx.designer.cs">
       <DependentUpon>BrewerMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Brewers_Image_Link.aspx.cs">
+      <DependentUpon>Brewers_Image_Link.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Brewers_Image_Link.aspx.designer.cs">
+      <DependentUpon>Brewers_Image_Link.aspx</DependentUpon>
     </Compile>
     <Compile Include="Brewer_List_Beers.aspx.cs">
       <DependentUpon>Brewer_List_Beers.aspx</DependentUpon>
@@ -85,9 +99,95 @@
     <Compile Include="Beer_List_Details.aspx.designer.cs">
       <DependentUpon>Beer_List_Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CurrencyConverter.aspx.cs">
+      <DependentUpon>CurrencyConverter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrencyConverter.aspx.designer.cs">
+      <DependentUpon>CurrencyConverter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureConverter.aspx.cs">
+      <DependentUpon>TemperatureConverter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemperatureConverter.aspx.designer.cs">
+      <DependentUpon>TemperatureConverter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Voetballers.aspx.cs">
+      <DependentUpon>Voetballers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Voetballers.aspx.designer.cs">
+      <DependentUpon>Voetballers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CountryCurrency\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CountryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CurrencyService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\HelloWorld.asmx.cs">
+      <DependentUpon>HelloWorld.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\TemperatureService.asmx.cs">
+      <DependentUpon>TemperatureService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\CountryService\CountryInfoService.wsdl" />
+    <Content Include="Web References\CountryService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\CountryService\tContinent1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryService\tCountryCodeAndName1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryService\tCountryCodeAndNameGroupedByContinent1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryService\tCountryInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryService\tCurrency1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryService\tLanguage1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\CountryCurrency\CountryInformationService.wsdl" />
+    <Content Include="Web References\CountryCurrency\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\CurrencyService\CurrencyConvertor.wsdl" />
+    <Content Include="Web References\CurrencyService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,6 +204,47 @@
       <Project>{6ddaddc1-91ee-44c4-990c-c7f91292df88}</Project>
       <Name>LayeredBusinessModel.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.ezzylearning.com/services/CountryInformationService.asmx%3fop=GetCurrencyNameByCountry">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CountryCurrency\</RelPath>
+      <UpdateFromURL>http://www.ezzylearning.com/services/CountryInformationService.asmx%3fop=GetCurrencyNameByCountry</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LayeredBusinessModel_WebUI_CountryCurrency_CountryInformationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CountryService\</RelPath>
+      <UpdateFromURL>http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LayeredBusinessModel_WebUI_org_oorsprong_www_CountryInfoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.webservicex.net/CurrencyConvertor.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CurrencyService\</RelPath>
+      <UpdateFromURL>http://www.webservicex.net/CurrencyConvertor.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LayeredBusinessModel_WebUI_CurrencyService_CurrencyConvertor</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

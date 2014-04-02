@@ -10,7 +10,7 @@
 namespace LayeredBusinessModel.WebUI {
     
     
-    public partial class BrewerMap {
+    public partial class Brewers_Image_Link {
         
         /// <summary>
         /// form1 control.
@@ -29,23 +29,5 @@ namespace LayeredBusinessModel.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBrewers;
-        
-        /// <summary>
-        /// latFld control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden latFld;
-        
-        /// <summary>
-        /// lngFld control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden lngFld;
     }
 }

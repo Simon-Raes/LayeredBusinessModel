@@ -105,8 +105,8 @@
                 </Columns>
             </asp:GridView>
             
-            <input name="latFld" id="latFld" type="text" runat="server"/>
-            <input name="lngFld" id="lngFld" type="text" runat="server"/>
+            <input name="latFld" id="latFld" type="hidden" runat="server"/>
+            <input name="lngFld" id="lngFld" type="hidden" runat="server"/>
             
         </div>
 

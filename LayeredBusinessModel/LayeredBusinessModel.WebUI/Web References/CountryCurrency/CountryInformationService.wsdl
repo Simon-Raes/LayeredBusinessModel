@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ezzylearning.com/services/CountryInformationService.asmx" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.ezzylearning.com/services/CountryInformationService.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ezzylearning.com/services/CountryInformationService.asmx">
+      <s:element name="GetServiceName">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServiceNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountries">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByTwoLetterISOCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="twoLetterISOCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByTwoLetterISOCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByTwoLetterISOCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTwoLetterISOCodeByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTwoLetterISOCodeByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTwoLetterISOCodeByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByThreeLetterISOCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="threeLetterISOCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByThreeLetterISOCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByThreeLetterISOCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetThreeLetterISOCodeByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetThreeLetterISOCodeByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetThreeLetterISOCodeByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapitalByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapitalByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCapitalByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaInKMByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaInKMByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAreaInKMByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPopulationByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPopulationByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPopulationByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContinents">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetContinentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContinentsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountriesByContinent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="continentCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountriesByContinentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesByContinentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByCurrencyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByCurrencyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByCurrencyCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencies">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrenciesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrenciesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyCodeByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyCodeByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyCodeByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyNameByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyNameByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyNameByCountryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyByCurrencyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyByCurrencyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyByCurrencyCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServiceNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceName" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByTwoLetterISOCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByTwoLetterISOCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetTwoLetterISOCodeByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetTwoLetterISOCodeByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByThreeLetterISOCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByThreeLetterISOCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetThreeLetterISOCodeByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetThreeLetterISOCodeByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCapitalByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCapitalByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAreaInKMByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAreaInKMByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPopulationByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPopulationByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContinentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContinents" />
+  </wsdl:message>
+  <wsdl:message name="GetContinentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContinentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountriesByContinent" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesByContinentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByCurrencyCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByCurrencyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencies" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodeByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodeByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyNameByCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyNameByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByCurrencyCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByCurrencyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceNameHttpGetIn" />
+  <wsdl:message name="GetServiceNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpGetIn" />
+  <wsdl:message name="GetCountriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeHttpGetIn">
+    <wsdl:part name="twoLetterISOCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeHttpGetIn">
+    <wsdl:part name="threeLetterISOCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContinentsHttpGetIn" />
+  <wsdl:message name="GetContinentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentHttpGetIn">
+    <wsdl:part name="continentCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeHttpGetIn">
+    <wsdl:part name="currencyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesHttpGetIn" />
+  <wsdl:message name="GetCurrenciesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountryHttpGetIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeHttpGetIn">
+    <wsdl:part name="currencyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceNameHttpPostIn" />
+  <wsdl:message name="GetServiceNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpPostIn" />
+  <wsdl:message name="GetCountriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeHttpPostIn">
+    <wsdl:part name="twoLetterISOCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByTwoLetterISOCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTwoLetterISOCodeByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeHttpPostIn">
+    <wsdl:part name="threeLetterISOCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByThreeLetterISOCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThreeLetterISOCodeByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapitalByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaInKMByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPopulationByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContinentsHttpPostIn" />
+  <wsdl:message name="GetContinentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentHttpPostIn">
+    <wsdl:part name="continentCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesByContinentHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeHttpPostIn">
+    <wsdl:part name="currencyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrencyCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesHttpPostIn" />
+  <wsdl:message name="GetCurrenciesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyCodeByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountryHttpPostIn">
+    <wsdl:part name="countryName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyNameByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeHttpPostIn">
+    <wsdl:part name="currencyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyByCurrencyCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="CountryInformationServiceSoap">
+    <wsdl:operation name="GetServiceName">
+      <wsdl:input message="tns:GetServiceNameSoapIn" />
+      <wsdl:output message="tns:GetServiceNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesSoapIn" />
+      <wsdl:output message="tns:GetCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <wsdl:input message="tns:GetCountryByTwoLetterISOCodeSoapIn" />
+      <wsdl:output message="tns:GetCountryByTwoLetterISOCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetTwoLetterISOCodeByCountrySoapIn" />
+      <wsdl:output message="tns:GetTwoLetterISOCodeByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <wsdl:input message="tns:GetCountryByThreeLetterISOCodeSoapIn" />
+      <wsdl:output message="tns:GetCountryByThreeLetterISOCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetThreeLetterISOCodeByCountrySoapIn" />
+      <wsdl:output message="tns:GetThreeLetterISOCodeByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <wsdl:input message="tns:GetCapitalByCountrySoapIn" />
+      <wsdl:output message="tns:GetCapitalByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <wsdl:input message="tns:GetAreaInKMByCountrySoapIn" />
+      <wsdl:output message="tns:GetAreaInKMByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <wsdl:input message="tns:GetPopulationByCountrySoapIn" />
+      <wsdl:output message="tns:GetPopulationByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <wsdl:input message="tns:GetContinentsSoapIn" />
+      <wsdl:output message="tns:GetContinentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <wsdl:input message="tns:GetCountriesByContinentSoapIn" />
+      <wsdl:output message="tns:GetCountriesByContinentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <wsdl:input message="tns:GetCountryByCurrencyCodeSoapIn" />
+      <wsdl:output message="tns:GetCountryByCurrencyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <wsdl:input message="tns:GetCurrenciesSoapIn" />
+      <wsdl:output message="tns:GetCurrenciesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <wsdl:input message="tns:GetCurrencyCodeByCountrySoapIn" />
+      <wsdl:output message="tns:GetCurrencyCodeByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <wsdl:input message="tns:GetCurrencyNameByCountrySoapIn" />
+      <wsdl:output message="tns:GetCurrencyNameByCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <wsdl:input message="tns:GetCurrencyByCurrencyCodeSoapIn" />
+      <wsdl:output message="tns:GetCurrencyByCurrencyCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CountryInformationServiceHttpGet">
+    <wsdl:operation name="GetServiceName">
+      <wsdl:input message="tns:GetServiceNameHttpGetIn" />
+      <wsdl:output message="tns:GetServiceNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesHttpGetIn" />
+      <wsdl:output message="tns:GetCountriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <wsdl:input message="tns:GetCountryByTwoLetterISOCodeHttpGetIn" />
+      <wsdl:output message="tns:GetCountryByTwoLetterISOCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetTwoLetterISOCodeByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetTwoLetterISOCodeByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <wsdl:input message="tns:GetCountryByThreeLetterISOCodeHttpGetIn" />
+      <wsdl:output message="tns:GetCountryByThreeLetterISOCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetThreeLetterISOCodeByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetThreeLetterISOCodeByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <wsdl:input message="tns:GetCapitalByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetCapitalByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <wsdl:input message="tns:GetAreaInKMByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetAreaInKMByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <wsdl:input message="tns:GetPopulationByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetPopulationByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <wsdl:input message="tns:GetContinentsHttpGetIn" />
+      <wsdl:output message="tns:GetContinentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <wsdl:input message="tns:GetCountriesByContinentHttpGetIn" />
+      <wsdl:output message="tns:GetCountriesByContinentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <wsdl:input message="tns:GetCountryByCurrencyCodeHttpGetIn" />
+      <wsdl:output message="tns:GetCountryByCurrencyCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <wsdl:input message="tns:GetCurrenciesHttpGetIn" />
+      <wsdl:output message="tns:GetCurrenciesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <wsdl:input message="tns:GetCurrencyCodeByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetCurrencyCodeByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <wsdl:input message="tns:GetCurrencyNameByCountryHttpGetIn" />
+      <wsdl:output message="tns:GetCurrencyNameByCountryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <wsdl:input message="tns:GetCurrencyByCurrencyCodeHttpGetIn" />
+      <wsdl:output message="tns:GetCurrencyByCurrencyCodeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CountryInformationServiceHttpPost">
+    <wsdl:operation name="GetServiceName">
+      <wsdl:input message="tns:GetServiceNameHttpPostIn" />
+      <wsdl:output message="tns:GetServiceNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesHttpPostIn" />
+      <wsdl:output message="tns:GetCountriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <wsdl:input message="tns:GetCountryByTwoLetterISOCodeHttpPostIn" />
+      <wsdl:output message="tns:GetCountryByTwoLetterISOCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetTwoLetterISOCodeByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetTwoLetterISOCodeByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <wsdl:input message="tns:GetCountryByThreeLetterISOCodeHttpPostIn" />
+      <wsdl:output message="tns:GetCountryByThreeLetterISOCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <wsdl:input message="tns:GetThreeLetterISOCodeByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetThreeLetterISOCodeByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <wsdl:input message="tns:GetCapitalByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetCapitalByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <wsdl:input message="tns:GetAreaInKMByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetAreaInKMByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <wsdl:input message="tns:GetPopulationByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetPopulationByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <wsdl:input message="tns:GetContinentsHttpPostIn" />
+      <wsdl:output message="tns:GetContinentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <wsdl:input message="tns:GetCountriesByContinentHttpPostIn" />
+      <wsdl:output message="tns:GetCountriesByContinentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <wsdl:input message="tns:GetCountryByCurrencyCodeHttpPostIn" />
+      <wsdl:output message="tns:GetCountryByCurrencyCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <wsdl:input message="tns:GetCurrenciesHttpPostIn" />
+      <wsdl:output message="tns:GetCurrenciesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <wsdl:input message="tns:GetCurrencyCodeByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetCurrencyCodeByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <wsdl:input message="tns:GetCurrencyNameByCountryHttpPostIn" />
+      <wsdl:output message="tns:GetCurrencyNameByCountryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <wsdl:input message="tns:GetCurrencyByCurrencyCodeHttpPostIn" />
+      <wsdl:output message="tns:GetCurrencyByCurrencyCodeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CountryInformationServiceSoap" type="tns:CountryInformationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceName">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetServiceName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByTwoLetterISOCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetTwoLetterISOCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByThreeLetterISOCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetThreeLetterISOCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCapitalByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetAreaInKMByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetPopulationByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetContinents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountriesByContinent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByCurrencyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyNameByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <soap:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyByCurrencyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CountryInformationServiceSoap12" type="tns:CountryInformationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceName">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetServiceName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByTwoLetterISOCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetTwoLetterISOCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByThreeLetterISOCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetThreeLetterISOCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCapitalByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetAreaInKMByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetPopulationByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetContinents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountriesByContinent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCountryByCurrencyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyCodeByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyNameByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <soap12:operation soapAction="http://www.ezzylearning.com/services/CountryInformationService.asmx/GetCurrencyByCurrencyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CountryInformationServiceHttpGet" type="tns:CountryInformationServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetServiceName">
+      <http:operation location="/GetServiceName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <http:operation location="/GetCountries" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <http:operation location="/GetCountryByTwoLetterISOCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <http:operation location="/GetTwoLetterISOCodeByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <http:operation location="/GetCountryByThreeLetterISOCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <http:operation location="/GetThreeLetterISOCodeByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <http:operation location="/GetCapitalByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <http:operation location="/GetAreaInKMByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <http:operation location="/GetPopulationByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <http:operation location="/GetContinents" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <http:operation location="/GetCountriesByContinent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <http:operation location="/GetCountryByCurrencyCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <http:operation location="/GetCurrencies" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <http:operation location="/GetCurrencyCodeByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <http:operation location="/GetCurrencyNameByCountry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <http:operation location="/GetCurrencyByCurrencyCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CountryInformationServiceHttpPost" type="tns:CountryInformationServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetServiceName">
+      <http:operation location="/GetServiceName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <http:operation location="/GetCountries" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByTwoLetterISOCode">
+      <http:operation location="/GetCountryByTwoLetterISOCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoLetterISOCodeByCountry">
+      <http:operation location="/GetTwoLetterISOCodeByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByThreeLetterISOCode">
+      <http:operation location="/GetCountryByThreeLetterISOCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThreeLetterISOCodeByCountry">
+      <http:operation location="/GetThreeLetterISOCodeByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapitalByCountry">
+      <http:operation location="/GetCapitalByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaInKMByCountry">
+      <http:operation location="/GetAreaInKMByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopulationByCountry">
+      <http:operation location="/GetPopulationByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinents">
+      <http:operation location="/GetContinents" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountriesByContinent">
+      <http:operation location="/GetCountriesByContinent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrencyCode">
+      <http:operation location="/GetCountryByCurrencyCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <http:operation location="/GetCurrencies" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodeByCountry">
+      <http:operation location="/GetCurrencyCodeByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyNameByCountry">
+      <http:operation location="/GetCurrencyNameByCountry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByCurrencyCode">
+      <http:operation location="/GetCurrencyByCurrencyCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CountryInformationService">
+    <wsdl:port name="CountryInformationServiceSoap" binding="tns:CountryInformationServiceSoap">
+      <soap:address location="http://www.ezzylearning.com/services/CountryInformationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CountryInformationServiceSoap12" binding="tns:CountryInformationServiceSoap12">
+      <soap12:address location="http://www.ezzylearning.com/services/CountryInformationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CountryInformationServiceHttpGet" binding="tns:CountryInformationServiceHttpGet">
+      <http:address location="http://www.ezzylearning.com/services/CountryInformationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CountryInformationServiceHttpPost" binding="tns:CountryInformationServiceHttpPost">
+      <http:address location="http://www.ezzylearning.com/services/CountryInformationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

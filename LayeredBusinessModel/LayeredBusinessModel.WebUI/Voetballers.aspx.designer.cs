@@ -10,7 +10,7 @@
 namespace LayeredBusinessModel.WebUI {
     
     
-    public partial class BrewerMap {
+    public partial class Voetballers {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,39 @@ namespace LayeredBusinessModel.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// gvBrewers control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvBrewers;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// latFld control.
+        /// ddlCountries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden latFld;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCountries;
         
         /// <summary>
-        /// lngFld control.
+        /// lblCurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden lngFld;
+        protected global::System.Web.UI.WebControls.Label lblCurrency;
+        
+        /// <summary>
+        /// txtCurrency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCurrency;
     }
 }
