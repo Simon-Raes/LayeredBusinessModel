@@ -49,10 +49,7 @@
                 } else {
                     alert('U heeft al een marker geplaatst');
                 }
-
-
-            });
-            
+            });            
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 

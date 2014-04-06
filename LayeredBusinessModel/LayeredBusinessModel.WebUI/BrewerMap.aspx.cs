@@ -46,14 +46,16 @@ namespace LayeredBusinessModel.WebUI
                 brewer.longitude = "";
             }
 
-            //save updated brewer
+            //save updated brewer to database
             brewerService.updateBrewer(brewer);
+
             //update gridview
             gvBrewers.DataSource = brewerService.GetAll();
             gvBrewers.DataBind();
             
         }
 
+        //handle page changing event
         protected void gvBrewers_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvBrewers.PageIndex = e.NewPageIndex;
