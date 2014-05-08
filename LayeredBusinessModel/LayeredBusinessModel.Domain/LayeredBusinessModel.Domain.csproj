@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Beer.cs" />
     <Compile Include="Brewer.cs" />
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

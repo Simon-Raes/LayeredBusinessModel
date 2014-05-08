@@ -13,12 +13,30 @@ namespace LayeredBusinessModel.BLL
     {
         private BierDAO bierDAO;
 
+        public void saveBeer(Beer bier)
+        {
+            bierDAO = new BierDAO();
+            bierDAO.saveBeer(bier);
+        }
+
         public List<Beer> GetAll()
         {
             List<Beer> beerList = new List<Beer>();
             bierDAO = new BierDAO();
             beerList = bierDAO.getAllBeer();
             return beerList;
+        }
+
+        public List<Beer> getBeersMatchingName(String name)
+        {
+            bierDAO = new BierDAO();
+            return bierDAO.getBeersMatchingName(name);
+        }
+
+        public List<Beer> getBierSorting(String name, String searchText)
+        {
+            bierDAO = new BierDAO();
+            return bierDAO.getBierSorting(name, searchText);
         }
 
         public List<Beer> getBeersForBrewer(String number)

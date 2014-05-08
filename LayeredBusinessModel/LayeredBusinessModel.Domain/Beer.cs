@@ -8,7 +8,7 @@ namespace LayeredBusinessModel.Domain
 {
     public class Beer
     {
-        public int beernr { get; set; }
+        public int biernr { get; set; }
         public String naam { get; set; }
         public int brouwernr { get; set; }
         public int soortnr { get; set; }

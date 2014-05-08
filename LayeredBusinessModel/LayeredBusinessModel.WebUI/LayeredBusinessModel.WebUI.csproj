@@ -38,6 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Arcabase.EID.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b84d20ea1506aba8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Arcabase.EID.SDK.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -57,12 +65,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ErrorPages\404.html" />
+    <Content Include="ArcabaseEID.jar" />
     <Content Include="BrewerMap.aspx" />
     <Content Include="Brewers_Image_Link.aspx" />
     <Content Include="Brewer_List_Beers.aspx" />
     <Content Include="Beer_List_Details.aspx" />
     <Content Include="CurrencyConverter.aspx" />
+    <Content Include="DLL\AjaxControlToolkit.dll" />
+    <Content Include="DLL\Arcabase.EID.SDK.dll" />
+    <Content Include="eID.aspx" />
+    <Content Include="EIDCommunicationService.asmx" />
+    <Content Include="eIDModal.aspx" />
+    <Content Include="images\cancel.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\save.png" />
+    <Content Include="ErrorPages\Oops.html" />
+    <Content Include="Paging.aspx" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="TemperatureConverter.aspx" />
+    <Content Include="Update.aspx" />
     <Content Include="Voetballers.aspx" />
     <Content Include="Web References\CountryCurrency\CountryInformationService.disco" />
     <Content Include="Web References\CurrencyService\CurrencyConvertor.disco" />
@@ -106,11 +128,39 @@
     <Compile Include="CurrencyConverter.aspx.designer.cs">
       <DependentUpon>CurrencyConverter.aspx</DependentUpon>
     </Compile>
+    <Compile Include="eID.aspx.cs">
+      <DependentUpon>eID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eID.aspx.designer.cs">
+      <DependentUpon>eID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eIDModal.aspx.cs">
+      <DependentUpon>eIDModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eIDModal.aspx.designer.cs">
+      <DependentUpon>eIDModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paging.aspx.cs">
+      <DependentUpon>Paging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paging.aspx.designer.cs">
+      <DependentUpon>Paging.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="TemperatureConverter.aspx.cs">
       <DependentUpon>TemperatureConverter.aspx</DependentUpon>
@@ -118,6 +168,13 @@
     </Compile>
     <Compile Include="TemperatureConverter.aspx.designer.cs">
       <DependentUpon>TemperatureConverter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Voetballers.aspx.cs">
       <DependentUpon>Voetballers.aspx</DependentUpon>
@@ -188,6 +245,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="DLL\vssver2.scc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
