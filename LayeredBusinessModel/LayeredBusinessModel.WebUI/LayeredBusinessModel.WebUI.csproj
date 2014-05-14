@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DeleteRecord.aspx" />
     <Content Include="ErrorPages\404.html" />
     <Content Include="ArcabaseEID.jar" />
     <Content Include="BrewerMap.aspx" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="CurrencyConverter.aspx.designer.cs">
       <DependentUpon>CurrencyConverter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRecord.aspx.cs">
+      <DependentUpon>DeleteRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteRecord.aspx.designer.cs">
+      <DependentUpon>DeleteRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="eID.aspx.cs">
       <DependentUpon>eID.aspx</DependentUpon>

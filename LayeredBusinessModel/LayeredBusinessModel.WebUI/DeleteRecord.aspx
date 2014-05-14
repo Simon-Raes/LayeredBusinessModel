@@ -10,6 +10,18 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:GridView ID="gvBeer" runat="server" AutoGenerateColumns="False" OnRowDataBound="gvBeer_RowDataBound" OnRowDeleting="gvBeer_RowDeleting">
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button ID="btnDeleter" runat="server" Text="Delete" CommandName="Delete"/>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="biernr" HeaderText="biernr" />
+                <asp:BoundField DataField="naam" HeaderText="naam" />
+            </Columns>
+        </asp:GridView>
+    
     </div>
     </form>
 </body>
