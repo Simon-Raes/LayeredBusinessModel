@@ -34,7 +34,10 @@ namespace LayeredBusinessModel.WebUI
             bierService = new BierService();
 
             //haal ALLE gegevens van 1 bier op
-            Beer beer = bierService.getBeerWithID(row.Cells[0].Text);
+            //Beer beer = bierService.getBeerWithID(row.Cells[0].Text);
+
+            //aangepast naar stored procedure versie
+            Beer beer = bierService.getStoredBeerWithID(row.Cells[0].Text);
             //resultaat in labels plaatsen
             lblName.Text = "beer name: "+beer.naam;
             lblAlcohol.Text = "beer alcohol: " + beer.alcohol;

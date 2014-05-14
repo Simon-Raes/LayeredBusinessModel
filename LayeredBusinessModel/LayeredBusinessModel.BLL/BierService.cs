@@ -60,6 +60,14 @@ namespace LayeredBusinessModel.BLL
             bierDAO = new BierDAO();
             return bierDAO.getBeerWithID(id);   
         }
+
+        
+
+        public Beer getStoredBeerWithID(String id)
+        {
+            bierDAO = new BierDAO();
+            return bierDAO.GetBier_Stored(id);
+        }
     }
     
 }

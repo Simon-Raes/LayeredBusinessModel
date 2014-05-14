@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using LayeredBusinessModel.Domain;
 using System.Configuration;
+using System.Data;
 
 namespace LayeredBusinessModel.DAO
 {
@@ -34,7 +35,7 @@ namespace LayeredBusinessModel.DAO
                 }
 
                 reader.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -70,7 +71,7 @@ namespace LayeredBusinessModel.DAO
             try
             {
                 cnn.Open();
-                dtaAdapter.UpdateCommand.ExecuteNonQuery();                
+                dtaAdapter.UpdateCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -111,14 +112,14 @@ namespace LayeredBusinessModel.DAO
             return beerList;
         }
 
-        
+
 
         public Beer getBeerWithID(String beerID)
         {
             cnn = new SqlConnection(sDatabaseLocatie);
             Beer beer = new Beer();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM bieren WHERE biernr = "+beerID, cnn);
+            SqlCommand command = new SqlCommand("SELECT * FROM bieren WHERE biernr = " + beerID, cnn);
             try
             {
                 cnn.Open();
@@ -141,6 +142,38 @@ namespace LayeredBusinessModel.DAO
                 cnn.Close();
             }
             return beer;
+        }
+
+        public Beer GetBier_Stored(String bier_id)
+        {
+            using (var cnn = new SqlConnection(sDatabaseLocatie))
+            {
+                using (SqlCommand command = new SqlCommand("GET_BIER", cnn))
+                {
+                    Beer beer = null;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter("@biernr", bier_id));
+                    try
+                    {
+                        cnn.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        reader.Read();
+                        beer = CreateBeer(reader);
+                        reader.Close();
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+                    finally
+                    {
+                        cnn.Close();
+                    }
+
+                    return beer;
+
+                }
+            }
         }
 
 
@@ -185,7 +218,7 @@ namespace LayeredBusinessModel.DAO
 
             //moet met parameter gebeuren!
             SqlCommand command = new SqlCommand("SELECT * FROM bieren WHERE naam LIKE @name", cnn);
-            command.Parameters.Add(new SqlParameter("@name", "%"+searchText+"%"));
+            command.Parameters.Add(new SqlParameter("@name", "%" + searchText + "%"));
 
             try
             {
@@ -270,7 +303,7 @@ namespace LayeredBusinessModel.DAO
             return beer;
         }
 
-        
+
 
     }
 

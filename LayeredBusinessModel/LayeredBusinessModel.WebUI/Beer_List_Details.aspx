@@ -12,10 +12,10 @@
             
             <tr>
                 <td>
-                    <asp:GridView ID="gvBeer" runat="server" AutoGenerateColumns="False" OnRowCommand="gvBeer_RowCommand" BackColor="#FFFF66" AllowPaging="true" PageSize="15">
+                    <asp:GridView ID="gvBeer" runat="server" AutoGenerateColumns="False" OnRowCommand="gvBeer_RowCommand" BackColor="#FFFF66" AllowPaging="True" PageSize="15">
                         <AlternatingRowStyle BackColor="#FFFF99" />
                         <Columns>
-                            <asp:BoundField DataField="beernr" HeaderText="Biernummer" />
+                            <asp:BoundField DataField="biernr" HeaderText="Biernummer" />
                             <asp:BoundField DataField="naam" HeaderText="Naam" />
                             <asp:BoundField DataField="alcohol" HeaderText="Alcohol" />
                             <asp:CommandField ShowSelectButton="True" />
